@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import Galaxy from './Galaxy';
 import './Galaxy.css'; 
 
-
 import minhaFoto from './assets/foto.jpeg'; 
 import printSuplementos from './assets/site.png'; 
 import printProjeto2 from './assets/gerador de css.jpeg'; 
