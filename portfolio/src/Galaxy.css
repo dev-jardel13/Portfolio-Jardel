@@ -1,0 +1,70 @@
+.galaxy-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #000000;
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.avatar-container {
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.avatar-container:hover {
+  transform: scale(1.05);
+  border-color: rgba(255, 255, 255, 1) !important;
+  box-shadow: 0 0 35px rgba(255, 255, 255, 0.35) !important;
+}
+
+
+.card-destaque {
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.card-destaque:hover {
+  transform: scale(1.02);
+  border-color: rgba(255, 255, 255, 0.25) !important;
+  box-shadow: 0 25px 55px rgba(0,0,0,0.85) !important;
+}
+
+
+.card-projeto {
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.card-projeto:hover {
+  transform: scale(1.04);
+  border-color: rgba(255, 255, 255, 0.2) !important;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.6) !important;
+}
+
+
+.img-hover-zoom {
+  transition: transform 0.4s ease;
+}
+.img-hover-zoom:hover {
+  transform: scale(1.08);
+}
+
+
+.social-link {
+  transition: background-color 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
+}
+.social-link:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+  transform: translateY(-3px);
+}
+
+
+.nav-link {
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+.nav-link:hover {
+  color: #fff !important;
+  background-color: rgba(255, 255, 255, 0.05);
+}
