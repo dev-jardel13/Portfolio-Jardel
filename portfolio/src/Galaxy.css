@@ -12,7 +12,7 @@ canvas {
   height: 100%;
 }
 
-/* FOTO */
+
 
 .avatar-container {
   transition: all 0.35s ease;
@@ -104,7 +104,7 @@ canvas {
   width: 100%;
 }
 
-/* SCROLLBAR */
+
 
 ::-webkit-scrollbar {
   width: 8px;
@@ -123,7 +123,7 @@ canvas {
   background: rgba(255, 255, 255, 0.3);
 }
 
-/* ANIMAÇÃO DE ENTRADA */
+
 
 @keyframes fadeUp {
   from {
@@ -143,9 +143,7 @@ canvas {
   animation: fadeUp 0.8s ease;
 }
 
-/* ========================= */
-/* RESPONSIVIDADE TABLET */
-/* ========================= */
+
 
 @media (max-width: 768px) {
 
@@ -169,9 +167,7 @@ canvas {
   }
 }
 
-/* ========================= */
-/* RESPONSIVIDADE CELULAR */
-/* ========================= */
+
 
 @media (max-width: 480px) {
 
