@@ -1,13 +1,18 @@
 import React, { useState } from 'react';
 import Galaxy from './Galaxy';
 import './Galaxy.css'; 
-
 import minhaFoto from './assets/foto.jpeg'; 
 import printSuplementos from './assets/site.png'; 
 import printProjeto2 from './assets/gerador de css.jpeg'; 
 import printProjeto3 from './assets/Calculadora.png'; 
 import printProjeto4 from './assets/Sistema de Agendamento.png'; 
 
+
+import certifClaude101 from './assets/Claude 101.png';
+import certifAction from './assets/Claude Code in Action.png';
+import certifCode101 from './assets/Claude Code 101.png';
+import certificado from './assets/Imersao Dev com Google Gemini.png'; 
+import certifingles from './assets/Curso de English .jpeg';
 export default function App() {
   const [imagemZoom, setImagemZoom] = useState(null);
 
@@ -17,6 +22,50 @@ export default function App() {
       element.scrollIntoView({ behavior: 'smooth' });
     }
   };
+
+  const meusCertificados = [
+    {
+      id: 1,
+      titulo: "Claude 101",
+      instituicao: "Anthropic",
+      cargaHoraria: "1 h",
+      ano: "2026",
+      imagem: certifClaude101, 
+    },
+    {
+      id: 2,
+      titulo: "Claude Code In Action",
+      instituicao: "Anthropic",
+      cargaHoraria: "3 h",
+      ano: "2026",
+      imagem: certifAction, 
+    },
+    {
+      id: 3,
+      titulo: "Claude Code 101",
+      instituicao: "Anthropic",
+      cargaHoraria: "3 h",
+      ano: "2026",
+      imagem: certifCode101
+    },
+    { 
+      id: 4,
+      titulo: "Imersão Dev Com Google Gemini 10ª Edição",
+      instituicao: "Alura Parceria com Google Gemini",
+      cargaHoraria: "3 h",
+      ano: "2025",
+      imagem: certificado 
+    },
+    { 
+      id: 5,
+      titulo: "Curso de Inglês Nível Básico",
+      instituicao: "ITEP - Instituto de Tecnologia e Educação Profissional",
+      cargaHoraria: "100 h",
+      ano: "2025",
+      imagem: certifingles 
+    },
+    
+  ];
 
   const outrosProjetos = [
     {
@@ -34,7 +83,7 @@ export default function App() {
     {
       id: 3,
       titulo: "Sistema de Agendamento de Horarios",
-      descricao: "Desenvolvimento de um sistema de agendamento de horários utilizando Java e Spring Boot. O projeto envolve a criação de uma aplicação web que permite aos usuários marcar compromissos, visualizar disponibilidade e gerenciar seus horários de forma eficiente. A aplicação inclui funcionalidades como cadastro de usuários, criação e gerenciamento de eventos, e integração com um banco de dados para armazenar as informações de agendamento.",
+      descricao: "Desenvolvimento de um sistema de agendamento de horários utilizando Java e Spring Boot. O projeto envolve a criação de uma aplicação web que permite aos usuários marcar compromissos, visualizar disponibilidade e gerenciar seus horários de forma eficiente. A aplicação includes funcionalidades como cadastro de usuários, criação e gerenciamento de eventos, e integração com um banco de dados para armazenar as informações de agendamento.",
       imagem: printProjeto4
     },
   ];
@@ -50,7 +99,7 @@ export default function App() {
       fontFamily: '"Segoe UI", Roboto, Helvetica, Arial, sans-serif'
     }}>
       
-  
+     
       <div style={{ 
         width: '100vw', 
         height: '100vh', 
@@ -75,18 +124,7 @@ export default function App() {
         />
       </div>
 
-     
-      <div style={{
-        position: 'absolute',
-        top: 0,
-        left: 0,
-        width: '100%',
-        height: '100%',
-        backgroundColor: 'transparent',
-        zIndex: 2,
-        pointerEvents: 'none'
-      }} />
-
+   
       <nav style={{
         position: 'fixed',
         top: 0,
@@ -107,11 +145,13 @@ export default function App() {
       }}>
         <button onClick={() => scrollToSection('inicio')} className="nav-link" style={navLinkStyle}>Início</button>
         <button onClick={() => scrollToSection('sobre')} className="nav-link" style={navLinkStyle}>Sobre</button>
+        <button onClick={() => scrollToSection('certificados')} className="nav-link" style={navLinkStyle}>Certificados</button>
         <button onClick={() => scrollToSection('destaque')} className="nav-link" style={navLinkStyle}>Destaque</button>
         <button onClick={() => scrollToSection('galeria')} className="nav-link" style={navLinkStyle}>Projetos</button>
         <button onClick={() => scrollToSection('contato')} className="nav-link" style={navLinkStyle}>Redes</button>
       </nav>
 
+    
       <div style={{
         position: 'relative',
         zIndex: 10,
@@ -125,6 +165,7 @@ export default function App() {
         pointerEvents: 'none'
       }}>
         
+       
         <section id="inicio" style={{
           minHeight: '60vh',
           display: 'flex',
@@ -178,7 +219,8 @@ export default function App() {
           boxSizing: 'border-box',
           display: 'flex',
           flexDirection: 'column',
-          justifyContent: 'center'
+          justifyContent: 'center',
+          pointerEvents: 'auto'
         }}>
           <div style={{
             backgroundColor: 'rgba(15, 15, 15, 0.8)',
@@ -187,7 +229,6 @@ export default function App() {
             padding: '25px', 
             boxSizing: 'border-box',
             backdropFilter: 'blur(8px)',
-            pointerEvents: 'auto',
             boxShadow: '0 15px 35px rgba(0,0,0,0.6)'
           }}>
             <h2 style={{ fontSize: '1.4rem', fontWeight: '600', margin: '0 0 15px 0', color: '#fff' }}>
@@ -230,6 +271,67 @@ export default function App() {
           </div>
         </section>
 
+        
+        <section id="certificados" style={{
+          minHeight: '50vh',
+          width: '100%',
+          maxWidth: '680px',
+          padding: '40px 20px',
+          boxSizing: 'border-box',
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          pointerEvents: 'auto'
+        }}>
+          <h2 style={{ fontSize: '1.3rem', fontWeight: '600', marginBottom: '20px', color: '#fff' }}>
+            📜 Certificações & Cursos
+          </h2>
+
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+            {meusCertificados.map((cert) => (
+              <div 
+                key={cert.id} 
+                onClick={() => cert.imagem && setImagemZoom(cert.imagem)}
+                style={{
+                  backgroundColor: 'rgba(15, 15, 15, 0.8)',
+                  border: '1px solid rgba(255, 255, 255, 0.08)',
+                  borderRadius: '12px',
+                  padding: '16px 20px',
+                  display: 'flex',
+                  justifyContent: 'space-between',
+                  alignItems: 'center',
+                  gap: '15px',
+                  cursor: cert.imagem ? 'zoom-in' : 'default',
+                  transition: 'transform 0.2s, border-color 0.2s',
+                  boxShadow: '0 4px 15px rgba(0,0,0,0.3)',
+                  backdropFilter: 'blur(8px)'
+                }}
+              >
+                <div style={{ flex: 1 }}>
+                  <h3 style={{ fontSize: '0.95rem', fontWeight: '600', margin: '0 0 4px 0', color: '#fff' }}>
+                    {cert.titulo}
+                  </h3>
+                  <p style={{ fontSize: '0.8rem', color: '#aaa', margin: 0 }}>
+                    {cert.instituicao} • <span style={{ color: '#888' }}>{cert.cargaHoraria}</span>
+                  </p>
+                </div>
+                
+                <div style={{ textAlign: 'right', display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '6px' }}>
+                  <span style={{ fontSize: '0.75rem', color: '#666', fontWeight: '500' }}>
+                    {cert.ano}
+                  </span>
+                  {cert.imagem && (
+                    <span style={{ fontSize: '0.65rem', color: '#00ffaa', backgroundColor: 'rgba(0,255,170,0.08)', padding: '2px 6px', borderRadius: '4px' }}>
+                      Ver documento
+                    </span>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        
         <section id="destaque" style={{
           minHeight: '70vh',
           width: '100%',
@@ -294,6 +396,7 @@ export default function App() {
           </div>
         </section>
 
+       
         <section id="galeria" style={{
           minHeight: '65vh',
           width: '100%',
@@ -344,6 +447,7 @@ export default function App() {
           </div>
         </section>
 
+        {/* SEÇÃO REDES / CONTATO */}
         <section id="contato" style={{
           minHeight: '55vh',
           display: 'flex',
@@ -369,7 +473,7 @@ export default function App() {
             maxWidth: '500px'
           }}>
             <a href="https://www.linkedin.com/in/luiz-jardel/?skipRedirect=true" target="_blank" rel="noreferrer" className="social-link" style={socialLinkStyle}>LinkedIn</a>
-            <a href="https://github.com/seu-usuario" target="_blank" rel="noreferrer" className="social-link" style={socialLinkStyle}>GitHub</a>
+            <a href="https://github.com/dev-jardel13" target="_blank" rel="noreferrer" className="social-link" style={socialLinkStyle}>GitHub</a>
             <a href="https://www.instagram.com/dev.jardel/" target="_blank" rel="noreferrer" className="social-link" style={socialLinkStyle}>Instagram</a>
             <a href="mailto:luizjardel13@gmail.com" className="social-link" style={socialLinkStyle}>E-mail</a>
             <a href="https://www.youtube.com/@devjardel13" target="_blank" rel="noreferrer" className="social-link" style={socialLinkStyle}>YouTube</a>
@@ -378,6 +482,7 @@ export default function App() {
 
       </div>
 
+      
       {imagemZoom && (
         <div 
           onClick={() => setImagemZoom(null)}
